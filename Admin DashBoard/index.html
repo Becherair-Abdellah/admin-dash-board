@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard</title>
+    <!-- ================= style Css file ================= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ====================== Google Fonts =================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- ================ start navigation ================= -->
+        <div class="navigation">
+            <ul class="lsit">
+                <!-- ===== start li 1 ======= -->
+                <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="logo-apple-appstore"></ion-icon> </span>
+                        <span class="Title">Abdellah</span>
+                        <span id="close" class="icon-close"><ion-icon name="close-circle-outline"></ion-icon></span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="Title">Dash Board</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                        <span class="Title">Messages</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="Title">Customers</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+                        <span class="Title">Help</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="Title">Settings</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <span class="Title">Password</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+
+                 <!-- ===== start li 1 ======= -->
+                 <li>
+                    <a href="">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="Title">Sign Out</span>
+                    </a>
+                </li>
+                <!-- ====== end li 1 ========= -->
+            </ul>
+        </div>
+    </div>
+    <!-- ================ end  navigation ================= -->
+        <!-- ================ start Div Menu ===================== -->
+        <div class="Menu">
+             <!-- ============ start topBar Div ============= -->
+            <div class="topBar">
+                <!-- ======= icon bars ======= -->
+                <div class="icon-bars"><ion-icon name="menu-outline"></ion-icon></div>
+                <!-- =========== Search  ========== -->
+                <div class="search">
+                    <button><ion-icon name="search-outline"></ion-icon></button>
+                    <input type="text">
+                  
+    
+                </div>
+                  <!-- ========== image ========== -->
+                  <div class="img">
+                    <img src="assets/img/customer01.jpg" alt="">
+                </div>
+            </div>
+            <!-- ============ End topBar Div ============= -->
+
+            <!-- ============ start Box Div ============= -->
+            <div class="boxes">
+
+                <div class="box">
+                    <div class="textBox">
+                        <span class="number">1504</span>
+                    <span class="text">Daily Views</span>
+                    </div>
+                    <div class="icon">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="textBox">
+                        <span class="number">80</span>
+                    <span class="text">Sales</span>
+                    </div>
+                    <div class="icon">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="textBox">
+                        <span class="number">490</span>
+                    <span class="text">Chat</span>
+                    </div>
+                    <div class="icon">
+                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="textBox">
+                        <span class="number">$ <span id="money">8760</span>
+                        </span>
+                    <span class="text">Earning</span>
+                    </div>
+                    <div class="icon">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <!-- ============ End box Div ============= -->
+
+            <!-- =============== start div recent ============== -->
+            <div class="recent">
+                <div class="recentOrders">
+                    <div class="titleRecent">
+                        <span class="title">Recent Orders</span>
+                        <span class="viewAll">View All</span>
+                    </div>
+                    <ul class="listRecent">
+                        <li>
+                            <span id="name">Name</span>
+                            <span id="Price">Price</span>
+                            <span id="Payment">Payment</span>
+                            <span id="Status">Status</span>
+                        </li>
+                        <li>
+                            <span id="name">Star Refrigerator</span>
+                            <span id="Price">$1200</span>
+                            <span id="Payment">Paid</span>
+                            <span id="Status">Delivered</span>
+                        </li>
+                        <li>
+                            <span id="name">Dell Laptop</span>
+                            <span id="Price">$110</span>
+                            <span id="Payment">Due</span>
+                            <span id="Status">Pending</span>
+                        </li>
+                        <li>
+                            <span id="name">Apple Watch</span>
+                            <span id="Price">$1200</span>
+                            <span id="Payment">Paid</span>
+                            <span id="Status">Return</span>
+                        </li>
+                        <li>
+                            <span id="name">Addidas Shoes</span>
+                            <span id="Price">$620</span>
+                            <span id="Payment">Due</span>
+                            <span id="Status">In Progress</span>
+                        </li>
+
+                        <li>
+                            <span id="name">Star Refrigerator</span>
+                            <span id="Price">$1200</span>
+                            <span id="Payment">Paid</span>
+                            <span id="Status">Delivered</span>
+                        </li>
+                        <li>
+                            <span id="name">Dell Laptop</span>
+                            <span id="Price">$110</span>
+                            <span id="Payment">Due</span>
+                            <span id="Status">Pending</span>
+                        </li>
+                        <li>
+                            <span id="name">Apple Watch</span>
+                            <span id="Price">$1200</span>
+                            <span id="Payment">Paid</span>
+                            <span id="Status">Return</span>
+                        </li>
+                        <li>
+                            <span id="name">Addidas Shoes</span>
+                            <span id="Price">$620</span>
+                            <span id="Payment">Due</span>
+                            <span id="Status">In Progress</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recentCustomers">
+                    <div class="titleRecentCustomers">
+                        <span class="title">Recent Orders</span>
+                    </div>
+                    <ul class="customers">
+                        <li>
+                            <img src="assets/img/customer01.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">David</span>
+                                <span class="country">Italy</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer02.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">Abdellah</span>
+                                <span class="country">Algeria</span>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer01.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">David</span>
+                                <span class="country">Italy</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer02.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">Abdellah</span>
+                                <span class="country">Algeria</span>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer01.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">David</span>
+                                <span class="country">Italy</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer02.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">Abdellah</span>
+                                <span class="country">Algeria</span>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer01.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">David</span>
+                                <span class="country">Italy</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img src="assets/img/customer02.jpg" alt="">
+                            <div class="text">
+                                <span class="nameCustomers">Abdellah</span>
+                                <span class="country">Algeria</span>
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- =============== end div recent ============== -->
+        </div>
+            <!-- ================ end Div Menu ===================== -->
+
+
+    <!-- ================== Usage Icon from labrary Ionicons ================ -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+/* ======== Globals Ruls ========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ======= variables Root ======== */
+:root{
+    --main: rgb(243, 49, 74);
+    --color1 : white;
+    --colorGray:#999999;
+}
+/* ========= body styling =========== */
+body{
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+}
+/* =========== navigation ========== */
+.container {
+    position: relative;
+    width: 100%;
+}
+.container .navigation {  
+    position: fixed;
+    width: 300px;
+    background-color: var(--main);
+    height: 100%;
+    border-left: 5px solid var(--main);
+    transition: 0.3s;
+    overflow: hidden;
+}
+.container .navigation ul {  
+    list-style: none;
+
+}
+.container .navigation ul li a .icon-bars{
+    position: absolute;
+    right: 0;
+    font-size: 35px;
+    padding: 10px;
+}
+.container .navigation ul li a {  
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+    display: flex;
+    justify-content: start;
+    padding: 12px 9px;
+    align-items: center;
+    position: relative;
+}
+.container .navigation ul li:not(:first-child) a:hover,
+.container .navigation ul li:not(:first-child).hovered a{  
+    color: var(--main);
+    background-color: var(--color1);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.container .navigation ul li:not(:first-child):hover a::before,
+.container .navigation ul li:not(:first-child).hovered a::before  { 
+    content: '';
+    width: 51px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    border-radius: 50%;
+    top: -50px;
+    box-shadow: 35px 35px 0px 10px white;
+}
+.container .navigation.active ul li:not(:first-child):hover a::after,
+.container .navigation.active ul li:not(:first-child).hovered a::after {
+    width: 48px;
+    z-index: -100;
+    right: 0px;
+}
+.container .navigation ul li:not(:first-child):hover a::after,
+.container .navigation ul li:not(:first-child).hovered a::after    { 
+    content: '';
+    width: 51px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    border-radius: 50%;
+    bottom: -50px;
+    box-shadow: 35px -35px 0px 10px white;
+}
+.container .navigation ul li:nth-child(1) {  
+    /* pointer-events: none; */
+}
+.container .navigation ul li a .icon{  
+    font-size: 27px;
+    margin-right: 18px;
+}
+.container .navigation ul li a .Title{  
+    font-size: 17px;
+}
+/* ============= styling Menu ================ */
+.Menu{
+    position: absolute;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100%;
+    transition: 0.3s;
+}
+.Menu.active{
+    left: 58px;
+    width: calc(100% - 58px);
+}
+.navigation.active{
+    width: 58px;
+}
+.Menu .topBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+.Menu .topBar .icon-bars{
+    font-size: 40px;
+    position: relative;
+    color: black;
+    top: 7px;
+}
+.Menu .topBar .search{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.Menu .topBar .search input{
+    width: 300px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    background-color: #f0f0f0;
+    outline: none;
+    padding: 0 0 0 9px;
+    font-size: 17px;
+}
+.Menu .topBar .search button{
+    padding: 0 20px;
+    height: 40px;
+    border: 0;
+    color: white;
+    background-color: var(--main);
+    border-radius: 0 3px 3px 0;
+    font-weight: bold;
+    font-size: 19px;
+    position: relative;
+    right: 0px;
+}
+.Menu .topBar .img img{
+    width: 43px;
+    border-radius: 50%;
+}
+/* ========== styling box ============= */
+.Menu .boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 36px 0;
+}
+.Menu .boxes .box{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 5px -3px #7b7b7b;
+    cursor: pointer;
+    justify-content: space-evenly;
+}
+.Menu.active .boxes .box{
+    width: 246.01px;
+}
+.Menu .boxes .box .textBox{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+.Menu .boxes .box .number{
+    font-size: 50px;
+    color: var(--main);
+    font-weight: bold;
+}
+.Menu .boxes .box .text{
+    color: gray;
+    font-size: 17px;
+}
+.Menu .boxes .box .icon{
+    font-size: 44px;
+    color: gray;
+}
+.Menu .boxes .box:hover{
+    background-color: var(--main);
+}
+.Menu .boxes .box:hover .icon,
+.Menu .boxes .box:hover .text,
+.Menu .boxes .box:hover .number {
+    color: white;
+}
+/* =========== recent div styling ============= */
+.Menu .recent{
+    display: flex;
+    /* display: none; */
+    justify-content: space-evenly;
+}
+.Menu .recent .recentOrders{
+    width: 60%;
+    background-color: #f4f4f4;
+    padding: 16px;
+    border-radius: 23px;
+    box-shadow: 0 0 5px -3px black;
+}
+.Menu .recent .recentOrders .listRecent,
+.Menu .recent .recentCustomers .customers{
+    list-style: none;
+}
+.Menu .recent .recentOrders .listRecent li:not(:first-child){
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 6px;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+}
+.Menu .recent .recentOrders .listRecent li:not(:first-child):hover{
+    background-color: var(--main);
+    border-radius: 5px;
+    color: var(--color1);
+}
+.Menu .recent .recentOrders .listRecent li:not(:first-child) #Price{
+    position: absolute;
+    left: 29%;
+}
+.Menu .recent .recentOrders .listRecent li:not(:first-child) #Payment{
+    position: absolute;
+    left: 60%;
+}
+.Menu .recent .recentOrders .listRecent li:first-child{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 6px;
+}
+.Menu .recent .titleRecent{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    align-items: center;
+}
+.Menu .recent .titleRecent .title{
+    color: var(--main);
+    font-weight: bold;
+    font-size: 25px;
+}
+.Menu .recent .titleRecent .viewAll{
+    background-color: var(--main);
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Menu .recent .recentCustomers{
+    width: 30%;
+    padding: 16px;
+    background-color: #f4f4f4;
+    border-radius: 23px;
+    box-shadow: 0 0 5px -3px black;
+}
+.Menu .recent .recentCustomers .titleRecentCustomers{
+    color: var(--main);
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.Menu .recent .recentCustomers .titleRecentCustomers {
+    color: var(--main);
+    font-size: 25px;
+    font-weight: bold;
+}
+.Menu .recent .recentCustomers .customers li{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px;
+}
+.Menu .recent .recentCustomers .customers li:hover{
+    color: var(--color1);
+    background-color: var(--main);
+    border-radius: 5px;
+}
+.Menu .recent .recentCustomers .customers li img  {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.Menu .recent .recentCustomers .customers li .text{
+    display: flex;
+    flex-direction: column;
+}
+.Menu .recent .recentCustomers .customers li .text .country{
+    color: gray;
+    font-size: 14px;
+}
+.Menu .recent .recentCustomers .customers li:hover .text .country{
+    color: var(--color1);
+}
+#Status{
+    padding: 3px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+}
+.container .navigation li a .icon-close {
+    display: none;
+}
+/* styling Responsive */
+@media (max-width: 425px){
+
+    .container .navigation {
+            display: block;
+            z-index: 1;
+            width: 100%;
+            left: 0px;
+        }
+        .container .navigation.activeClose {
+            left: -376px;
+
+        }
+    .container .navigation li a .icon-close {
+        display: block;
+            font-size: 33px;
+        }
+    .Menu{
+        width: 100%;
+        left: 0;
+    }
+    .Menu.active{
+        left: 0;
+        width: 100%;
+    }
+    .Menu .topBar {
+        align-items: normal;
+        justify-content: space-between;
+    }
+    .Menu .topBar .icon-bars {
+        font-size: 27px;
+    }
+    .Menu .topBar .search input {
+        width: 200px;
+        height: 30px;
+    }
+    .Menu .topBar .search button {
+        padding: 0 16px;
+        height: 30px;
+    }
+    .Menu .topBar .img img {
+        width: 35px;
+    }
+    .Menu .boxes {
+        padding: 36px 0;
+        display: block;
+    }
+    .Menu .boxes .box {
+        width: 95%;
+        margin: 0 auto 12px;
+    }
+    .Menu.active .boxes .box {
+        width: 95%;
+    }
+    .Menu .recent .recentOrders .listRecent li:not(:first-child) {
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .Menu .recent .recentOrders {
+        width: 95%;
+        margin: 0 auto 20px;
+    }
+    .Menu .recent {
+        display: flex;
+        flex-direction: column;
+    }
+    .Menu .recent .recentCustomers {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .container .navigation ul li:first-child a .Title {
+        flex: 1;
+    }
+}
